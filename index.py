@@ -13,7 +13,7 @@ def pinterest_scraper():
         return jsonify({'error': 'Please provide a search query'})
 
     # URL of the Pinterest search page
-    url = f'https://www.pinterest.com/search/pins/?q={search_query}'
+    url = 'https://www.pinterest.com/search/pins/?q={search_query}'
 
     # Send a GET request to the URL
     response = requests.get(url)
