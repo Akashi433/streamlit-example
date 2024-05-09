@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify, render_template
 import requests
 from bs4 import BeautifulSoup
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 
 @app.route('/pinterest_scraper')
 def pinterest_scraper():
