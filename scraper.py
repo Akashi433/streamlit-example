@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 def scrape_images():
     # URL dari waifu.pics
-    url = 'https://waifu.pics/api/sfw/waifu'
+    url = 'https://api.waifu.pics/sfw/waifu'
     
     # Mengambil konten HTML dari URL
     response = requests.get(url)
