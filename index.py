@@ -2,7 +2,7 @@
 from flask import Flask, render_template
 from scraper import scrape_images
 
-app = Flask(__name__, template_folder='templates')
+app = Flask(__name__)
 
 @app.route('/')
 def index():
