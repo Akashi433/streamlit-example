@@ -1,18 +1,10 @@
-from flask import Flask, render_template
+from flask import Flask
+from pinterest_routes import pinterest_routes
 
 app = Flask(__name__)
 
+# Register blueprint for Pinterest routes
+app.register_blueprint(pinterest_routes)
 
-@app.route('/')
-def hello():
-    return 'Hello, world'
-
-
-@app.route('/test')
-def test():
-    return 'Test'
-
-@app.route('/result')
-def result():
-   dict = {'phy':50,'che':60,'maths':70}
-   return render_template('result.html', result = dict)
+if __name__ == '__main__':
+    app.run(debug=True)
